@@ -503,3 +503,7 @@ https://www.cnblogs.com/ssooking/p/6017333.html
 ## 参考资料
 
 [**DNS 原理入门--阮一峰**](http://www.ruanyifeng.com/blog/2016/06/dns.html)
+
+## 后记
+
+CloudFlare免费套餐限定了http/https能用的端口----[Identifying network ports compatible with Cloudflare's proxy](https://support.cloudflare.com/hc/en-us/articles/200169156-Identifying-network-ports-compatible-with-Cloudflare-s-proxy)
