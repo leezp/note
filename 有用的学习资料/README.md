@@ -31,4 +31,6 @@
 
 [麻薯](http://uuzdaisuki.com/)  **内网渗透相关**
 
+[**防御逃避&进程注入&权限提升&权限维持**](https://idiotc4t.com/)
+
 ## [渗透师导航](https://www.shentoushi.top/)
