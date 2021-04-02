@@ -307,6 +307,10 @@ dig +trace 查询：
 
 出现 ```0.0.0.0``` 即为配置成功。
 
+**注意**
+
+如果 nslookup 解析 配置 的ns记录 ```ns3.funnyboys.store 和 ns4.funnyboys.store```不成功，也可以试试用cs能否上线。有的时候，这里开始时解析未成功，但上线以后，解析成功了。
+
 6.打开cs，我这里用的cs4.1，新建一个listener，
 
 ![](7.png)

