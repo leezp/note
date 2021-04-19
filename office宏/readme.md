@@ -121,6 +121,8 @@ VT查杀：
 
 如果报错，应使用工具 [olevba](https://github.com/decalage2/oletools) 检测是否添加了macro。
 
+https://github.com/decalage2/oletools/wiki/olevba
+
 如下是没检测到添加宏，原因是上面说的宏位置添加错了。
 
 	error : put the macro in your normal.dotm template, not in the document

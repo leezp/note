@@ -57,7 +57,7 @@ yum install httpd -y
 	
 	 systemctl status httpd.service
 
-在浏览器输入ip访问，如果无法访问，在防火墙添加规则
+**在浏览器输入ip访问，如果无法访问，在防火墙添加规则**
 
 centos7 默认预装 firewall 防火墙；
 
@@ -100,6 +100,7 @@ systemctl start firewalld
 
 	service postfix stop
 
+[Centos7安装Apache Http服务器无法访问如何解决](https://blog.csdn.net/u010447234/article/details/63253448)
 
 安装mysql (我这里装的mysql5.7)
 
