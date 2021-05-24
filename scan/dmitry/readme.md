@@ -7,5 +7,5 @@ fragbits关键字使用R/D/M分别匹配Flags的三位：
 suricata 中用 ```fragbits:D;``` 表示数据包不允许分片
 
 
-[windows关键字](https://suricata.readthedocs.io/en/latest/rules/header-keywords.html#window)
+[window关键字](https://suricata.readthedocs.io/en/latest/rules/header-keywords.html#window)
 
