@@ -217,11 +217,13 @@ mitm输出：
 
 其中，如下分别用dict和str尝试：
 
+
 		"headers": dict(r.headers),
         "cookies": dict(r.cookies),
         "params": dict(r.query),
 
 ![](images/5.jpg)
+
 
 		"headers": str(r.headers),
         "cookies": str(r.cookies),
@@ -376,8 +378,6 @@ index.py
 
 	curl -I https://www.baidu.com -x socks5://vps:8080 -U test:test -v   //-I 是head请求
 
-
-
 ![](images/18.png)
 
 多次执行，代理端回显：
@@ -385,6 +385,8 @@ index.py
 ![](images/19.png)
 
 左边为腾讯云动态ip，右边是baidu.com解析的百度ip。
+
+SOCKS5 是长连接，云函数服务端用了个 while 循环来同步 IO，会一直执行直到超时。需要将云函数超时时间设置成最大900s。
 
 ## 参考资料
 
