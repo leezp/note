@@ -51,6 +51,35 @@ A fast reverse proxy to help you expose a local server behind a NAT or firewall 
 
 plugin = socks5
 
+## ssh隧道
+
+server： 映射```vps_ip```
+
+	[common]
+	bind_port = 2333
+
+client：本地 10.20.24.56
+
+	[common]
+	server_addr = vps_ip
+	server_port = 2333
+	#token = token
+	[ssh]
+	type = tcp
+	local_ip = 127.0.0.1
+	local_port = 22
+	remote_port = 8080    # 设置将本地22端口映射到远程vps 8080端口上
+	flugin = sock5
+
+建立隧道后，攻击者访问映射```vps_ip```的ssh服务，在受害者 ```dst_addr```抓包:
+
+过滤单向流量，映射```vps_ip```的ssh服务向靶机发起请求：
+
+![](2.png)
+
+红框中```src_addr```为访问10.20.24.56映射到的```vps_ip```的8080 ssh服务的攻击者ip，```dst_addr```为10.20.24.56映射到的```vps_ip```的内网ip，```dst_port```为```vps_ip```起的ssh服务端口号。
+
+
 
 ## reference
 

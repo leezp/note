@@ -217,17 +217,15 @@ mitm输出：
 
 其中，如下分别用dict和str尝试：
 
-
-		"headers": dict(r.headers),
-        "cookies": dict(r.cookies),
-        "params": dict(r.query),
+	"headers": dict(r.headers),
+	"cookies": dict(r.cookies),
+	"params": dict(r.query),
 
 ![](images/5.jpg)
-
-
-		"headers": str(r.headers),
-        "cookies": str(r.cookies),
-        "params": str(r.query),
+	
+	"headers": str(r.headers),
+	"cookies": str(r.cookies),
+	"params": str(r.query),
 
 ![](images/6.jpg)
 
@@ -372,7 +370,7 @@ index.py
 
 客户端执行:
 
-	python socks5.py  -u "https://service-o4t2xyb9-XXXXXX.kr.apigw.tencentcs.com/release/XXXXXX" -bp 2333 -sp 8080 --user test --passwd test
+	python socks5.py -u "https://service-o4t2xyb9-XXXXXX.kr.apigw.tencentcs.com/release/XXXXXX" -bp 2333 -sp 8080 --user test --passwd test
 
 使用curl测试sock5代理：
 
