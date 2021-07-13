@@ -426,13 +426,12 @@ centos pcre 安装：
 
 	tar -zxvf go1.14.1.linux-amd64.tar.gz
 
-	vim /etc/profile
+vim /etc/profile
 
-export GOROOT=/go path/go #设置为go安装路径
-
-export GOPATH=$HOME/go #环境变量
-
-export PATH=$PATH:$GOROOT/src
+	export GOROOT=/go path/go #设置为go安装路径
+	export PATH=$PATH:$GOROOT/bin
+	
+	#export GOPATH=$HOME/go #环境变量
 
 source /etc/profile
 
