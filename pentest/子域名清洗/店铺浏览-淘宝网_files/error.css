@@ -1,0 +1,353 @@
+/* 出错页面的CSS_091026 */
+
+#error-shop h2 {
+    font-size: 16px;
+    background: url('http://pics.taobao.com/2k5/sys/component/standard_msg_warning_big.gif') no-repeat 5px 0;
+    height: 44px;
+    padding-left: 86px;
+    padding-top: 20px;
+    border-top: none;
+    border-bottom: none;
+    margin-top: 12px;
+
+}
+
+#other-way {
+    border: 1px solid #D9DCE1;
+    height: 158px;
+    width: 740px;
+    margin: 0 0 15px;
+}
+
+#other-way h3 {
+    font-size: 12px;
+    color: #373737;
+    display: block;
+    margin: 5px 0px;
+    padding-left: 10px;
+    border-bottom: 1px solid #D9DCE1;
+    background: none;
+}
+
+#other-way h3 .help {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0px 5pt 0pt 0px;
+    text-align: right;
+}
+
+#other-way .bd {
+
+    width: 100%;
+    height: 133px;
+
+}
+
+ol li {
+    /*
+    list-style-type:decimal;
+    list-style-position:inside;
+    line-height: 190%;
+    font-family:SimSun,Arial;
+    color: #000000;
+    padding-left:25px;*/
+/* We don't need this anymore */
+}
+
+/* 出错页面的CSS */
+
+#error-info h2 {
+    font-size: 16px;
+    background: url('http://pics.taobaocdn.com/bao/album/sys/misc/no-item_03.png') no-repeat 5px 0;
+    height: 64px;
+    padding-left: 86px;
+    padding-top: 20px;
+    border: none;
+    margin: 0 0 10px;
+    color: #666;
+}
+
+#error-info p {
+    padding-left: 86px;
+    margin: -50px 0 0;
+    line-height: 170%;
+    color: #666;
+    position: relative;
+}
+
+#good-recommend {
+    border: 1px solid #D9DCE1;
+    background: url('http://pics.taobao.com/bao/album/sys/good_recommend_box_bg.gif') repeat-x 0 0;
+    height: 185px;
+    padding: 6px 0px 0px 5px;
+    width: 750px;
+    margin: 0;
+
+}
+
+#good-recommend .top {
+    position: relative;
+}
+
+#good-recommend .top .title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #373737;
+    padding-left: 5px;
+}
+
+#good-recommend .top .more-link {
+    float: right;
+    position: relative;
+    top: -14px;
+    padding-right: 5px;
+}
+
+#good-recommend .more-link {
+    display: none;
+}
+
+#good-recommend ul {
+    margin-top: 15px;
+}
+
+#good-recommend ul li {
+    float: left;
+    list-style: none;
+    width: 102.5px;
+    text-align: center;
+    padding: 0 11px;
+    background: url('http://pics.taobao.com/bao/album/sys/list_vertical_sep.gif') repeat-y right top;
+}
+
+#good-recommend li .link img {
+    border: 1px solid #ccc;
+    margin: 0px !important;
+    margin-bottom: 2px;
+
+}
+
+#good-recommend li .link img:hover {
+    border: 1px solid #999;
+}
+
+#good-recommend li .price {
+    color: #f00;
+    font-weight: bold;
+    text-align: center;
+}
+
+#good-recommend li .num {
+    font-family: "Arial";
+    color: #0047ee;
+    font-weight: bold;
+    text-align: center;
+}
+
+#good-recommend ul li .hot-pro-list a.h {
+    color: #FF0000;
+}
+
+#good-recommend .market .icon {
+    border: none;
+    padding-top: 3px;
+}
+
+#good-recommend li a:link,
+    #good-recommend li a:visited {
+    color: #636363;
+
+}
+
+#good-recommend li.last {
+    background: none;
+}
+
+.view-more {
+    width: 738px;
+    margin-bottom: 20px;
+}
+
+.view-more .t-curve, .view-more .t-curve span, .view-more .b-curve, .view-more .b-curve span {
+    background-image: url('http://pics.taobaocdn.com/bao/album/sys/misc/no-item_07.png');
+    background-repeat: no-repeat;
+    line-height: 0px;
+    font-size: 0px;
+    display: block;
+    height: 5px;
+    clear: both;
+}
+
+.view-more .t-curve {
+    background-position: 0 0;
+}
+
+.view-more .t-curve span {
+    width: 50%;
+    float: right;
+    background-position: right 0px;
+}
+
+.view-more .b-curve {
+    background-position: 0 bottom;
+    _background-position: 3px bottom;
+}
+
+.view-more .b-curve span {
+    width: 50%;
+    float: right;
+    background-position: right bottom;
+    _background-position: 375px bottom;
+}
+
+.view-more h3 {
+    font-weight: normal;
+    margin: 0;
+    height: 24px;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.view-more h3 strong {
+    font-weight: bold;
+}
+
+.view-more ol {
+    padding: 10px 0 5px 0;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.view-more a.more-keyword-item {
+    text-decoration: underline;
+}
+
+.view-more a.search-item {
+    background: url('http://pics.taobaocdn.com/bao/album/sys/misc/no-item_04.png') no-repeat;
+    width: 70px;
+    height: 20px;
+    text-align: center;
+    line-height: 19px;
+    display: block;
+    margin-top: -21px;
+    margin-left: 135px;
+}
+
+.noresult .suggest-item {
+    padding: 10px 0px;
+}
+
+.noresult .suggest-item dt {
+    font-weight: 700;
+    color: #000;
+}
+
+.noresult .suggest-item ul {
+    margin: 10px 0px;
+    overflow: hidden;
+    _height: 1%;
+}
+
+.noresult .suggest-item ul li {
+    float: left;
+    width: 100px;
+    margin-right: 6px;
+}
+
+.noresult .suggest-item .item .pic {
+    margin: auto;
+    display: table;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ebebeb;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.noresult .suggest-item .item .desc {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.noresult .suggest-item .item .price {
+    text-align: center;
+}
+
+.noresult .suggest-item .item .price strong {
+    background: transparent url(http://assets.taobaocdn.com/sys/common/img/rmb.png) no-repeat scroll 0 0;
+    padding-left: 15px;
+    color: #f60;
+    font-size: 14px;
+}
+
+/* 出错页面样式优化 by jianfei */
+
+#recommendation-container {
+    width: 760px;
+    height: 200px;
+    margin: 0 auto 55px 95px;
+}
+
+#error-notice {
+    margin: 60px auto 30px 120px;
+}
+
+.ant-emotion {
+    float: left;
+    display: inline;
+}
+
+.error-notice-text {
+    float: left;
+    display: inline;
+    margin-left: 20px;
+}
+
+.error-notice-hd {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.error-notice-advice .you-can {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.error-notice-advice {
+    line-height: 2;
+}
+
+.error-notice-advice ol {
+    margin-left: 25px;
+}
+
+.error-notice-advice ol li {
+    list-style-type: decimal;
+}
+
+#page:after, #error-notice:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+#page, #error-notice {
+    _zoom: 1;
+}
+
+#error-page-divider {
+    width: 100%;
+    height: 3px;
+    background-color: #f59500;
+    clear: both;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+/* end of 出错页面样式优化 */
