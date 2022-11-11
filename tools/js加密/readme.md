@@ -1,0 +1,1 @@
+[sojson JS加密](https://www.sojson.com/charEncode.html)
