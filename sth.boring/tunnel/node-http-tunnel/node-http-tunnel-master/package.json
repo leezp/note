@@ -1,0 +1,9 @@
+{
+    "name": "node-http-tunnel"
+  , "version": "0.0.1"
+  , "dependencies": {
+      "node-socks": "git://github.com/johncant/node-socks.git"
+    , "request": "2.68.0"   
+    , "event-stream": "2.1.8"
+  }
+}

@@ -1,0 +1,44 @@
+#!/usr/bin/env node
+var net = require('net');
+var socks = require('node-socks/socks.js');
+var http = require('http');
+var request = require('request');
+var b64 = require('./lib/base64stream');
+var tunnel = require('./lib/request_tunnel');
+
+var tunnel_address, tunnel_port;
+
+if (!process.argv[2]) {
+  console.log('Usage: ./ssh-connect TUNNEL_ADDRESS TARGET_ADDRESS TARGET_PORT [MODE] # TUNNEL ADDRESS is the address of the tunnelling server. pass development as MODE for port 3001 ');
+  return 0;
+} else {
+  tunnel_address = process.argv[2]
+}
+
+if (process.argv[5] == 'development') {
+  tunnel_port = 3001;
+} else {
+  tunnel_port = 80;
+}
+
+var target_params = {host: process.argv[3], port: process.argv[4]};
+
+var client = tunnel.createPersistentClient(tunnel_address, tunnel_port, function() {
+  process.stdin.resume(); // ?
+
+  // Make a connection through the tunnel
+  client.TCPConnection(target_params, function(conn) {
+
+    // Now pipe the data
+    process.stdin.pipe(conn).pipe(process.stdout);
+    conn.on('end', function() {
+//      client.destroy();
+//      process.exit(0);
+    });
+
+  });
+
+});
+
+// vim: set filetype=javascript syntax=javascript :
+
